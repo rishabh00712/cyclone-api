@@ -1,4 +1,3 @@
 *.csv
-scaler.pkl
-*.pth
+
 MYENV
