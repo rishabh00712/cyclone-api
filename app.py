@@ -8,6 +8,11 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 import torch
 import torch.nn as nn  # This is where the nn module comes from
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+port = int(os.getenv('PORT', 5000))
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -151,5 +156,6 @@ def weather_data():
     except Exception as e:
         return jsonify({"error": f"An unexpected error occurred: {e}"}), 500
 
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port= port)
