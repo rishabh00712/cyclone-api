@@ -105,7 +105,7 @@ input_dim = X_train.shape[1]  # Number of features
 hidden_dim = 8  # A small number of neurons in the hidden layers
 output_dim = 1  # Output is Wind_Speed prediction
 learning_rate = 0.01
-num_epochs = 5000
+num_epochs = 1000
 l2_lambda = 1  # L2 regularization strength
 
 # Initialize the model
