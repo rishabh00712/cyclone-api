@@ -3,8 +3,6 @@ import requests
 import pickle
 import torch
 import numpy as np
-
-from sklearn.preprocessing import StandardScaler
 import joblib
 import torch.nn as nn  # This is where the nn module comes from
 from dotenv import load_dotenv
@@ -146,7 +144,9 @@ def weather_data():
         return jsonify({
         "latitude": latitude,
         "longitude": longitude,
-        "cyclone_probability": round(prediction.item(), 2)
+        "cyclone_probability": round(prediction.item(), 2),
+        "avg_surface_pressure": avg_surface_pressure,
+        "avg_wind_speed_10m":avg_wind_speed_10m
 })
 
 
