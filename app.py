@@ -7,7 +7,7 @@ import joblib
 import torch.nn as nn  # This is where the nn module comes from
 from dotenv import load_dotenv
 import os
-
+from sklearn.preprocessing import StandardScaler
 load_dotenv()
 port = int(os.getenv('PORT', 5000))
 
