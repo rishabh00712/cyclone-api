@@ -3,10 +3,9 @@ import requests
 import pickle
 import torch
 import numpy as np
-import pymongo
+
 from sklearn.preprocessing import StandardScaler
 import joblib
-import torch
 import torch.nn as nn  # This is where the nn module comes from
 from dotenv import load_dotenv
 import os
@@ -16,7 +15,7 @@ port = int(os.getenv('PORT', 5000))
 
 # Initialize Flask app
 app = Flask(__name__)
-import torch
+
 
 # Define the model architecture again (same as during training)
 class MLPModel(nn.Module):
@@ -158,4 +157,4 @@ def weather_data():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port= port)
+    app.run(host='0.0.0.0',debug=True, port= port)
